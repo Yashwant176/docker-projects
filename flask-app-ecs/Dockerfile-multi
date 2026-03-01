@@ -1,0 +1,21 @@
+
+FROM python:3.14-slim AS builder
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt --target=/app/lib
+
+COPY . .
+
+FROM gcr.io/distroless/python3-debian12
+
+WORKDIR /app
+
+COPY --from=builder /app/lib /app/lib
+COPY --from=builder /app .
+
+ENV PYTHONPATH="/app/lib"
+
+CMD ["run.py"]
