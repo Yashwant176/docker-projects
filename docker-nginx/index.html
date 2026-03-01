@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .feature {
+            margin-top: 25px;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .bug {
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .bug::before {
+            content: "✅ ";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Toh kaise he aap log 👋</h1>
+        <h3>Toh chaliye shuru karte hain bina kisi deri ke</h3>
+
+        <div class="feature">
+            🚀 This is a good feature
+        </div>
+
+        <div class="bug">
+            I have fixed the bug
+        </div>
+    </div>
+</body>
+</html>
+
+
+
